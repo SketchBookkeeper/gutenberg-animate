@@ -1,2 +1,2 @@
-# gutengerg-animate
+# Gutengerg Animate
 Add animation to your blocks.
