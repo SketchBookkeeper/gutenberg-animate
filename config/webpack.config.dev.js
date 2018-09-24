@@ -23,7 +23,6 @@
 const paths = require( './paths' );
 const autoprefixer = require( 'autoprefixer' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
-const Dotenv = require( 'dotenv-webpack' );
 
 // Export configuration.
 module.exports = {
@@ -80,7 +79,6 @@ module.exports = {
 	// Add plugins.
 	plugins: [
 		new ExtractTextPlugin( './dist/block.css' ),
-		new Dotenv(),
 	],
 	stats: 'minimal',
 	// stats: 'errors-only',

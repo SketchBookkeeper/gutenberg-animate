@@ -24,7 +24,6 @@ const paths = require( './paths' );
 const webpack = require( 'webpack' );
 const autoprefixer = require( 'autoprefixer' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
-const Dotenv = require( 'dotenv-webpack' );
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP === 'true';
@@ -83,7 +82,6 @@ module.exports = {
 	},
 	// Add plugins.
 	plugins: [
-		new Dotenv(),
 		new ExtractTextPlugin( './dist/block.css' ),
 		// Minify the code.
 		new webpack.optimize.UglifyJsPlugin( {
