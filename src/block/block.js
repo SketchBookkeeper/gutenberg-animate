@@ -8,11 +8,13 @@
 //  Import CSS.
 import './style.scss';
 import './editor.scss';
+import 'animate.css';
 
 const { __ } = wp.i18n; // Import __() from wp.i18n
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
+const { InnerBlocks } = wp.editor;
 
-import { MapContainer } from './edit';
+import { AnimationBlock } from './edit';
 
 /**
  * Register: a Gutenberg Block.
@@ -29,22 +31,34 @@ import { MapContainer } from './edit';
  */
 registerBlockType( 'ga/block-gutenberg-animate', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( 'Leaflet Map' ), // Block title.
+	title: __( 'Animation Block' ), // Block title.
 	icon: 'controls-play',
-	category: 'layout widgets', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
+	category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 	keywords: [
 		__( 'Animate' ),
 		__( 'Animation' ),
 	],
 
 	attributes: {
-
+		animationIn: {
+			type: 'string',
+			default: 'none',
+		},
+		animationOut: {
+			type: 'string',
+			default: 'none',
+		},
 	},
 
 	edit: function( props ) {
-		return new MapContainer( props );
+		return new AnimationBlock( props );
 	},
 
 	save: function( props ) {
+		return (
+			<div>
+				<InnerBlocks.Content />
+			</div>
+		);
 	},
 } );

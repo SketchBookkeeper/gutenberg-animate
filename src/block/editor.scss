@@ -1,2 +1,16 @@
 // Admin Styles
 @import '../common.scss';
+
+.gutenberg-animation-editor-block {
+	&__title {
+		color: $gray;
+		font-size: 0.8rem;
+		padding: 0;
+	}
+
+	&__inner-blocks-wrap {
+		border: 1px dashed $gray;
+		padding: 0 10px 2px;
+		position: relative;
+	}
+}
