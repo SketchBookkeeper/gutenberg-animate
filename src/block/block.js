@@ -55,9 +55,17 @@ registerBlockType( 'ga/block-gutenberg-animate', {
 	},
 
 	save: function( props ) {
+		const { attributes } = props;
+
 		return (
 			<div>
-				<InnerBlocks.Content />
+				<div
+					className="gutenberg-animate-block animated"
+					data-in={ attributes.animationIn }
+					data-out={ attributes.animationOut }
+				>
+					<InnerBlocks.Content />
+				</div>
 			</div>
 		);
 	},

@@ -22,13 +22,15 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function gutenberg_animate_block_block_assets() {
 	// Scripts
-	wp_enqueue_script(
-		'gutenberg_animate_block-frontend-js', // Handle.
-		plugins_url( '/dist/frontend.js', dirname( __FILE__ ) ),
-		array( 'wp-blocks', 'wp-i18n', 'wp-element' ),
-		filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.build.js' ), // Version: filemtime — Gets file modification time.
-		true // Enqueue the script in the footer.
-	);
+	if ( ! is_admin() ) { // Frontend only
+		wp_enqueue_script(
+			'gutenberg_animate_block-frontend-js', // Handle.
+			plugins_url( '/dist/frontend.js', dirname( __FILE__ ) ),
+			array( 'wp-blocks', 'wp-i18n', 'wp-element' ),
+			filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.build.js' ), // Version: filemtime — Gets file modification time.
+			true // Enqueue the script in the footer.
+		);
+	}
 
 	// Styles.
 	wp_enqueue_style(
