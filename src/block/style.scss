@@ -1,3 +1,15 @@
 // Block Styles
 
 @import '../common.scss';
+
+.gutenberg-animate-block[data-emergence=hidden] {
+	&.hide-before {
+		opacity: 0;
+	}
+}
+
+.gutenberg-animate-block[data-emergence=visible] {
+	&.show-after {
+		opacity: 1;
+	}
+}

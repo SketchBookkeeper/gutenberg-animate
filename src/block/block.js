@@ -14,6 +14,8 @@ const { __ } = wp.i18n; // Import __() from wp.i18n
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
 const { InnerBlocks } = wp.editor;
 
+import classNames from 'classnames';
+
 import { AnimationBlock } from './edit';
 
 /**
@@ -44,9 +46,9 @@ registerBlockType( 'ga/block-gutenberg-animate', {
 			type: 'string',
 			default: 'none',
 		},
-		animationOut: {
-			type: 'string',
-			default: 'none',
+		reset: {
+			type: 'boolean',
+			default: false,
 		},
 	},
 
@@ -56,13 +58,21 @@ registerBlockType( 'ga/block-gutenberg-animate', {
 
 	save: function( props ) {
 		const { attributes } = props;
+		const hideBefore = attributes.animationIn.includes( 'In' ); // Check if element needs to be hidden before
 
 		return (
 			<div>
 				<div
-					className="gutenberg-animate-block animated"
+					className={
+						classNames(
+							'gutenberg-animate-block',
+							'animated',
+							hideBefore ? 'hide-before' : 'show-before',
+						)
+					}
 					data-in={ attributes.animationIn }
-					data-out={ attributes.animationOut }
+					data-reset={ attributes.reset }
+					data-emergence="hidden"
 				>
 					<InnerBlocks.Content />
 				</div>

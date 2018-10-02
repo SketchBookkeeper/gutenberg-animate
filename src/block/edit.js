@@ -69,13 +69,34 @@ const animations = [
 		value: 'wobble',
 	},
 	{
-		label: 'Fade In',
-		value: 'fadeIn',
+		label: 'Jello',
+		value: 'jello',
+	},
+	{
+		label: 'Bounce In',
+		value: 'bounceIn',
+	},
+	{
+		label: 'Bounce In Down',
+		value: 'bounceInDown',
 	},
 	{
 		label: 'Bounce In Left',
 		value: 'bounceInLeft',
 	},
+	{
+		label: 'Bounce In Right',
+		value: 'bounceInRight',
+	},
+	{
+		label: 'Bounce In Up',
+		value: 'bounceInUp',
+	},
+	{
+		label: 'Fade In',
+		value: 'fadeIn',
+	},
+
 ];
 
 import classNames from 'classnames';
@@ -111,13 +132,13 @@ export class AnimationBlock extends Component {
 							} }
 						/>
 
-						<SelectControl
-							label="Animate Out"
-							value={ attributes.animationOut }
-							options={ animations }
-							onChange={ ( value ) => {
+						<ToggleControl
+							label="Reset Animation"
+							help="Should the animation re-run every time this block enters the viewport?"
+							checked={ attributes.reset }
+							onChange={ () => {
 								setAttributes( {
-									animationOut: value,
+									reset: ! attributes.reset,
 								} );
 							} }
 						/>
@@ -165,14 +186,9 @@ export class AnimationBlock extends Component {
 			blocksWrapEl.classList.add( attributes.animationIn );
 		}
 
-		if ( prevProps.attributes.animationOut !== attributes.animationOut ) {
-			blocksWrapEl.classList.add( attributes.animationOut );
-		}
-
 		// Remove animation classes in preparation for next preview.
 		blocksWrapEl.addEventListener( 'animationend', () => {
 			blocksWrapEl.classList.remove( attributes.animationIn );
-			blocksWrapEl.classList.remove( attributes.animationOut );
 		}, { once: true } );
 	}
 }
