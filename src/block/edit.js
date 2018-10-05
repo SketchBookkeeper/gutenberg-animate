@@ -6,7 +6,6 @@ const { __ } = wp.i18n;
 const {
 	InspectorControls,
 	InnerBlocks,
-	MediaUpload,
 } = wp.editor;
 
 const {
@@ -15,91 +14,12 @@ const {
 } = wp.element;
 
 const {
-	Button,
-	ColorPalette,
-	Dashicon,
-	Notice,
 	PanelBody,
-	RangeControl,
 	SelectControl,
-	TextareaControl,
 	ToggleControl,
-	Spinner,
 } = wp.components;
 
-const animations = [
-	{
-		label: 'None',
-		value: 'none',
-	},
-	{
-		label: 'Bounce',
-		value: 'bounce',
-	},
-	{
-		label: 'Flash',
-		value: 'flash',
-	},
-	{
-		label: 'Pulse',
-		value: 'pulse',
-	},
-	{
-		label: 'Rubber Band',
-		value: 'rubberBand',
-	},
-	{
-		label: 'Shake',
-		value: 'shake',
-	},
-	{
-		label: 'Head Shake',
-		value: 'headShake',
-	},
-	{
-		label: 'Swing',
-		value: 'swing',
-	},
-	{
-		label: 'Tada',
-		value: 'tada',
-	},
-	{
-		label: 'Wobble',
-		value: 'wobble',
-	},
-	{
-		label: 'Jello',
-		value: 'jello',
-	},
-	{
-		label: 'Bounce In',
-		value: 'bounceIn',
-	},
-	{
-		label: 'Bounce In Down',
-		value: 'bounceInDown',
-	},
-	{
-		label: 'Bounce In Left',
-		value: 'bounceInLeft',
-	},
-	{
-		label: 'Bounce In Right',
-		value: 'bounceInRight',
-	},
-	{
-		label: 'Bounce In Up',
-		value: 'bounceInUp',
-	},
-	{
-		label: 'Fade In',
-		value: 'fadeIn',
-	},
-
-];
-
-import classNames from 'classnames';
+import { animations } from './animations';
 
 /**
  * AnimationBlock
@@ -152,25 +72,13 @@ export class AnimationBlock extends Component {
 
 					<div
 						ref={ this.blocksWrap }
-						className={
-							classNames(
-								'gutenberg-animation-editor-block__inner-blocks-wrap',
-								'animated',
-							)
-						}
+						className="gutenberg-animation-editor-block__inner-blocks-wrap animated"
 					>
 						<InnerBlocks />
 					</div>
 				</div>
 			</Fragment>
 		);
-	}
-
-	//
-	// Did Mount
-	//
-	componentDidMount() {
-
 	}
 
 	//

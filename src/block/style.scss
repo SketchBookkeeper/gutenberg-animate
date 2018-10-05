@@ -11,5 +11,6 @@
 .gutenberg-animate-block[data-emergence=visible] {
 	&.show-after {
 		opacity: 1;
+		z-index: 1;
 	}
 }

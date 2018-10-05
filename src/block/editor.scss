@@ -2,6 +2,9 @@
 @import '../common.scss';
 
 .gutenberg-animation-editor-block {
+	position: relative;
+	z-index: 1;
+
 	&__title {
 		color: $gray;
 		font-size: 0.8rem;
