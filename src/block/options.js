@@ -180,3 +180,49 @@ export const animations = [
 		value: 'heartBeat',
 	},
 ];
+
+export const delays = [
+	{
+		label: 'none',
+		value: 'no-delay',
+	},
+	{
+		label: '2s',
+		value: 'delay-2s',
+	},
+	{
+		label: '3s',
+		value: 'delay-3s',
+	},
+	{
+		label: '4s',
+		value: 'delay-4s',
+	},
+	{
+		label: '5s',
+		value: 'delay-5s',
+	},
+];
+
+export const speeds = [
+	{
+		label: 'Default',
+		value: 'default-speed',
+	},
+	{
+		label: 'Slow',
+		value: 'slow',
+	},
+	{
+		label: 'Slower',
+		value: 'slower',
+	},
+	{
+		label: 'Fast',
+		value: 'fast',
+	},
+	{
+		label: 'Faster',
+		value: 'faster',
+	},
+];

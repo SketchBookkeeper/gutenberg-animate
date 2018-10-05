@@ -46,6 +46,14 @@ registerBlockType( 'ga/block-gutenberg-animate', {
 			type: 'string',
 			default: 'none',
 		},
+		animationDelay: {
+			type: 'string',
+			default: 'no-delay',
+		},
+		animationSpeed: {
+			type: 'string',
+			default: 'default-speed',
+		},
 		reset: {
 			type: 'boolean',
 			default: false,
@@ -68,6 +76,8 @@ registerBlockType( 'ga/block-gutenberg-animate', {
 							'gutenberg-animate-block',
 							'animated',
 							hideBefore ? 'hide-before' : 'show-before',
+							attributes.animationDelay,
+							attributes.animationSpeed,
 						)
 					}
 					data-in={ attributes.animationIn }

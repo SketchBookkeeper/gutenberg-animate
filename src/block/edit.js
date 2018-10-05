@@ -19,7 +19,13 @@ const {
 	ToggleControl,
 } = wp.components;
 
-import { animations } from './animations';
+import {
+	animations,
+	delays,
+	speeds,
+} from './options';
+
+import classNames from 'classnames';
 
 /**
  * AnimationBlock
@@ -42,12 +48,34 @@ export class AnimationBlock extends Component {
 				<InspectorControls>
 					<PanelBody title={ __( 'Animation Settings' ) }>
 						<SelectControl
-							label="Animate In"
+							label="Animation"
 							value={ attributes.animationIn }
 							options={ animations }
 							onChange={ ( value ) => {
 								setAttributes( {
 									animationIn: value,
+								} );
+							} }
+						/>
+
+						<SelectControl
+							label="Animation Delay "
+							value={ attributes.animationDelay }
+							options={ delays }
+							onChange={ ( value ) => {
+								setAttributes( {
+									animationDelay: value,
+								} );
+							} }
+						/>
+
+						<SelectControl
+							label="Animation Speed"
+							value={ attributes.animationSpeed }
+							options={ speeds }
+							onChange={ ( value ) => {
+								setAttributes( {
+									animationSpeed: value,
 								} );
 							} }
 						/>
@@ -72,7 +100,14 @@ export class AnimationBlock extends Component {
 
 					<div
 						ref={ this.blocksWrap }
-						className="gutenberg-animation-editor-block__inner-blocks-wrap animated"
+						className={
+							classNames(
+								'gutenberg-animation-editor-block__inner-blocks-wrap',
+								'animated',
+								attributes.animationDelay,
+								attributes.animationSpeed,
+							)
+						}
 					>
 						<InnerBlocks />
 					</div>
@@ -88,9 +123,12 @@ export class AnimationBlock extends Component {
 		const blocksWrapEl = this.blocksWrap.current;
 		const { attributes } = this.props;
 
-		// Provide user preview of the newly applied animation.
-		// Check if a new animation was applied, add it's class.
-		if ( prevProps.attributes.animationIn !== attributes.animationIn ) {
+		// Provide user preview of the newly applied animation attribute.
+		if (
+			attributes.animationIn !== prevProps.attributes.animationIn ||
+			attributes.animationDelay !== prevProps.attributes.animationDelay ||
+			attributes.animationSpeed !== prevProps.attributes.animationSpeed
+		) {
 			blocksWrapEl.classList.add( attributes.animationIn );
 		}
 
