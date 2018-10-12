@@ -8,9 +8,12 @@ Requires PHP: 5.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
+
 == Description ==
 
-Add animations to your Gutenberg blocks as they enter the viewport. Just add an Animation Block and then put any blocks to be animated into the animation block. Install the <a href="https://wordpress.org/plugins/gutenberg/" title="Gutenberg" target="_blank">Gutenberg plugin</a>.
+Add animations to your Gutenberg blocks as they enter the viewport.
+Just add an Animation Block and then put any blocks to be animated into the animation block.
+Install the <a href="https://wordpress.org/plugins/gutenberg/" title="Gutenberg" target="_blank">Gutenberg plugin</a>.
 
 
 = Main Features: =
@@ -25,7 +28,7 @@ Automatic installation
 
 1. Log into your WordPress admin area
 2. Go to Plugins -> Add New
-3. Search for Gutenberg Animate -> Install Now (on the side Gutenberg Animate)
+3. Search for Gutenberg Animate -> Install Now
 4. Activate the plugin
 5. Until Gutenberg gets merged into WordPress core, it requires the <a href="https://wordpress.org/plugins/gutenberg/" title="Gutenberg" target="_blank">Gutenberg plugin</a>.
 

@@ -17,6 +17,7 @@ const {
 	PanelBody,
 	SelectControl,
 	ToggleControl,
+	RangeControl,
 } = wp.components;
 
 import {
@@ -90,6 +91,17 @@ export class AnimationBlock extends Component {
 								} );
 							} }
 						/>
+
+						<RangeControl
+							label={ __( 'z-index' ) }
+							help="Fine tune stacking order with CSS z-index"
+							value={ attributes.zIndex }
+							onChange={ ( value ) => {
+								setAttributes( { zIndex: value } );
+							} }
+							min={ 1 }
+							max={ 999 }
+						/>
 					</PanelBody>
 				</InspectorControls>
 
@@ -108,6 +120,7 @@ export class AnimationBlock extends Component {
 								attributes.animationSpeed,
 							)
 						}
+						style={ { zIndex: attributes.zIndex } }
 					>
 						<InnerBlocks />
 					</div>

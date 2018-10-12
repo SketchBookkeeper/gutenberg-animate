@@ -2,6 +2,10 @@
 
 @import '../common.scss';
 
+.gutenberg-animate-block {
+	position: relative;
+}
+
 .gutenberg-animate-block[data-emergence=hidden] {
 	&.hide-before {
 		opacity: 0;

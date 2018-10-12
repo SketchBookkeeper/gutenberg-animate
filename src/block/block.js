@@ -58,6 +58,10 @@ registerBlockType( 'ga/block-gutenberg-animate', {
 			type: 'boolean',
 			default: false,
 		},
+		zIndex: {
+			type: 'number',
+			default: 1,
+		},
 	},
 
 	edit: function( props ) {
@@ -71,6 +75,7 @@ registerBlockType( 'ga/block-gutenberg-animate', {
 		return (
 			<div>
 				<div
+					style={ { zIndex: attributes.zIndex } }
 					className={
 						classNames(
 							'gutenberg-animate-block',
