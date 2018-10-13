@@ -94,7 +94,7 @@ export class AnimationBlock extends Component {
 
 						<RangeControl
 							label={ __( 'z-index' ) }
-							help="Fine tune stacking order with CSS z-index"
+							help="Some animations may need stacking order adjusted"
 							value={ attributes.zIndex }
 							onChange={ ( value ) => {
 								setAttributes( { zIndex: value } );
