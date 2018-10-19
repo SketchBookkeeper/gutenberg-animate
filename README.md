@@ -8,3 +8,13 @@ You will need to install the <a href="https://wordpress.org/plugins/gutenberg/" 
 `npm start` to watch the files.
 
 `npm run build` to bundle for production.
+
+Big Thanks to packages used.
+
+[Animate.css](https://daneden.github.io/animate.css/)
+
+[create-guten-block](https://github.com/ahmadawais/create-guten-block)
+
+[Emergence.js](https://xtianmiller.github.io/emergence.js/)
+
+To Name a few.

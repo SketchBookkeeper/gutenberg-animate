@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: Gutenberg Animate
- * Plugin URI:
- * Description: Add animation to your blocks.
- * Author: Paul Allen
+ * Plugin Name: Animation Block
+ * Plugin URI: https://wordpress.org/plugins/animation-block
+ * Description: Add animation to your Gutenberg blocks.
+ * Author: sketchbookkeeper
  * Author URI: https://github.com/SketchBookkeeper
  * Version: 1.0.0
  * License: GPL

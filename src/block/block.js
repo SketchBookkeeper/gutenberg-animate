@@ -1,5 +1,5 @@
 /**
- * BLOCK: gutenberg-animate
+ * BLOCK: animation-block
  *
  * Registering a basic block with Gutenberg.
  *
@@ -31,7 +31,7 @@ import { AnimationBlock } from './edit';
  * @return {?WPBlock}          The block, if it has been successfully
  *                             registered; otherwise `undefined`.
  */
-registerBlockType( 'ga/block-gutenberg-animate', {
+registerBlockType( 'ga/block-animation-block', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
 	title: __( 'Animation Block' ), // Block title.
 	icon: 'controls-play',
