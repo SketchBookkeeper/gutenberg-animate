@@ -18,6 +18,7 @@ const {
 	SelectControl,
 	ToggleControl,
 	RangeControl,
+	Dashicon,
 } = wp.components;
 
 import {
@@ -106,9 +107,10 @@ export class AnimationBlock extends Component {
 				</InspectorControls>
 
 				<div className="gutenberg-animation-editor-block">
-					<h2 className="gutenberg-animation-editor-block__title">
-						{ __( 'Animation Block' ) }
-					</h2>
+					<div className="gutenberg-animation-editor-block__tab">
+						<Dashicon icon="controls-play" />
+						<p className="gutenberg-animation-editor-block__title">{ __( 'Select Animation Block' ) }</p>
+					</div>
 
 					<div
 						ref={ this.blocksWrap }

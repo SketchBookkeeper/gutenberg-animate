@@ -2,17 +2,26 @@
 @import '../common.scss';
 
 .gutenberg-animation-editor-block {
-	position: relative;
-
-	&__title {
-		color: $gray;
-		font-size: 0.8rem;
-		padding: 0;
+	&,
+	&__inner-blocks-wrap {
+		position: relative;
 	}
 
-	&__inner-blocks-wrap {
-		border: 1px dashed $gray;
-		padding: 0 10px 2px;
-		position: relative;
+	&__title {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+
+	&__tab {
+		color: $green;
+		left: -35px;
+		position: absolute;
+		top: 0;
 	}
 }
