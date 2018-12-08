@@ -26,7 +26,7 @@ function gutenberg_animate_block_block_assets() {
 		wp_enqueue_script(
 			'gutenberg_animate_block-frontend-js', // Handle.
 			plugins_url( '/dist/frontend.js', dirname( __FILE__ ) ),
-			array( 'wp-blocks', 'wp-i18n', 'wp-element' ),
+			array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-components', 'wp-editor' ),
 			filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.build.js' ), // Version: filemtime — Gets file modification time.
 			true // Enqueue the script in the footer.
 		);
@@ -35,9 +35,7 @@ function gutenberg_animate_block_block_assets() {
 	// Styles.
 	wp_enqueue_style(
 		'gutenberg_animate_block-style-css', // Handle.
-		plugins_url( 'dist/block.css', dirname( __FILE__ ) ), // Block style CSS.
-		array( 'wp-blocks' ) // Dependency to include the CSS after it.
-		// filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.style.build.css' ) // Version: filemtime — Gets file modification time.
+		plugins_url( '/dist/block.css', dirname( __FILE__ ) )
 	);
 }
 
@@ -58,7 +56,7 @@ function gutenberg_animate_block_editor_assets() {
 	wp_enqueue_script(
 		'gutenberg_animate_block-block-js', // Handle.
 		plugins_url( '/dist/blocks.build.js', dirname( __FILE__ ) ), // Block.build.js: We register the block here. Built with Webpack.
-		array( 'wp-blocks', 'wp-i18n', 'wp-element' ), // Dependencies, defined above.
+		array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-components', 'wp-editor' ), // Dependencies, defined above.
 		filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.build.js' ), // Version: filemtime — Gets file modification time.
 		true // Enqueue the script in the footer.
 	);
@@ -66,7 +64,7 @@ function gutenberg_animate_block_editor_assets() {
 	// Styles.
 	wp_enqueue_style(
 		'gutenberg_animate_block-block-editor-css', // Handle.
-		plugins_url( 'dist/block.css', dirname( __FILE__ ) ), // Block editor CSS.
+		plugins_url( '/dist/block.css', dirname( __FILE__ ) ), // Block editor CSS.
 		array( 'wp-edit-blocks' ) // Dependency to include the CSS after it.
 		// filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.editor.build.css' ) // Version: filemtime — Gets file modification time.
 	);
