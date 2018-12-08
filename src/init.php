@@ -35,7 +35,9 @@ function gutenberg_animate_block_block_assets() {
 	// Styles.
 	wp_enqueue_style(
 		'gutenberg_animate_block-style-css', // Handle.
-		plugins_url( '/dist/block.css', dirname( __FILE__ ) )
+		plugins_url( '/dist/block.css', dirname( __FILE__ ) ),
+		array(),
+		'1.0.1'
 	);
 }
 
@@ -65,8 +67,8 @@ function gutenberg_animate_block_editor_assets() {
 	wp_enqueue_style(
 		'gutenberg_animate_block-block-editor-css', // Handle.
 		plugins_url( '/dist/block.css', dirname( __FILE__ ) ), // Block editor CSS.
-		array( 'wp-edit-blocks' ) // Dependency to include the CSS after it.
-		// filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.editor.build.css' ) // Version: filemtime — Gets file modification time.
+		array( 'wp-edit-blocks' ),
+		'1.0.1'
 	);
 }
 
