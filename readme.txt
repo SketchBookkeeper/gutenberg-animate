@@ -1,9 +1,9 @@
 === Animation Block ===
 Contributors: sketchbookkeeper
-Tags: animation, gutenberg, gutenberg block, block, animate, animate.css, fun
+Tags: animation, gutenberg, gutenberg block, block, animate, animate.css, animation block, css animation, animations
 Requires at least: 4.7
-Tested up to: 4.9
-Stable tag: 1.0.0
+Tested up to: 5.0
+Stable tag: 1.0.1
 Requires PHP: 5.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -11,10 +11,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Use the power of animate.css to animate Gutenberg blocks as they enter the viewport.
-Just add an Animation Block &#9658; and then put any blocks to be animated into the animation block.
-Install the <a href="https://wordpress.org/plugins/gutenberg/" title="Gutenberg" target="_blank">Gutenberg plugin</a>.
-
+Use the power of animate.css to animate Gutenberg blocks as they enter the viewport. Just add an Animation Block &#9658; and then put any blocks to be animated into the animation block.
 
 = Main Features: =
 
@@ -30,13 +27,12 @@ Automatic installation
 2. Go to Plugins -> Add New
 3. Search for Animation Block -> Install Now
 4. Activate the plugin
-5. Until Gutenberg gets merged into WordPress core, it requires the <a href="https://wordpress.org/plugins/gutenberg/" title="Gutenberg" target="_blank">Gutenberg plugin</a>.
 
 
 = Manual installation =
 
 The manual installation method involves downloading my Animation Block plugin and uploading it to your webserver
-via your favourite FTP application. The WordPress codex contains [instructions on how to do this here](https://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation).
+via your favorite FTP application. The WordPress codex contains [instructions on how to do this here](https://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation).
 
 
 = Minimum Requirements =
@@ -47,11 +43,18 @@ via your favourite FTP application. The WordPress codex contains [instructions o
 
 == Changelog ==
 
+= 1.0.1 - 12-07-2018 =
+Update UI
+Fix JavaScript not enqueuing on the frontend
+
 = 1.0.0 - 10-18-2018 =
 First Release
 
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Upgrade plugin for WordPress 5.0
 
 = 1.0.0 =
 First Release: First Release

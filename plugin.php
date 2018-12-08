@@ -5,7 +5,7 @@
  * Description: Add animation to your Gutenberg blocks.
  * Author: sketchbookkeeper
  * Author URI: https://github.com/SketchBookkeeper
- * Version: 1.0.0
+ * Version: 1.0.1
  * License: GPL
  *
  * @package GA
