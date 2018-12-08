@@ -107,7 +107,7 @@ export class AnimationBlock extends Component {
 				</InspectorControls>
 
 				<div className="gutenberg-animation-editor-block">
-					<div className="gutenberg-animation-editor-block__tab">
+					<div className="gutenberg-animation-editor-block__tab" title="Animation Block">
 						<Dashicon icon="controls-play" />
 						<p className="gutenberg-animation-editor-block__title">{ __( 'Select Animation Block' ) }</p>
 					</div>

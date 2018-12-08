@@ -23,5 +23,9 @@
 		left: -35px;
 		position: absolute;
 		top: 0;
+
+		&:hover {
+			color: lighten($green, 11%);
+		}
 	}
 }
