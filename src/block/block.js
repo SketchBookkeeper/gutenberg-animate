@@ -1,8 +1,5 @@
 /**
  * BLOCK: animation-block
- *
- * Registering a basic block with Gutenberg.
- *
  */
 
 //  Import CSS.
@@ -19,11 +16,7 @@ import classNames from 'classnames';
 import { AnimationBlock } from './edit';
 
 /**
- * Register: a Gutenberg Block.
- *
- * Registers a new block provided a unique name and an object defining its
- * behavior. Once registered, the block is made editor as an option to any
- * editor interface where blocks are implemented.
+ * Register.
  *
  * @link https://wordpress.org/gutenberg/handbook/block-api/
  * @param  {string}   name     Block name.
@@ -32,10 +25,9 @@ import { AnimationBlock } from './edit';
  *                             registered; otherwise `undefined`.
  */
 registerBlockType( 'ga/block-animation-block', {
-	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( 'Animation Block' ), // Block title.
+	title: __( 'Animation Block' ),
 	icon: 'controls-play',
-	category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
+	category: 'common',
 	keywords: [
 		__( 'Animate' ),
 		__( 'Animation' ),
