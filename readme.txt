@@ -2,8 +2,8 @@
 Contributors: sketchbookkeeper
 Tags: animation, gutenberg, gutenberg block, block, animate, animate.css, animation block, css animation, animations
 Requires at least: 4.7
-Tested up to: 5.0
-Stable tag: 1.0.1
+Tested up to: 5.2
+Stable tag: 1.0.2
 Requires PHP: 5.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -13,12 +13,21 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Use the power of animate.css to animate Gutenberg blocks as they enter the viewport.
 
-Just add an Animation Block &#9658; and then put any blocks to be animated into the animation block.
+Just add an Animation Block &#9658; and then put any blocks to be animated into the Animation Block.
 
 = Main Features: =
 
 - Animations from the Animate.css library.
 - Delay and Speed options.
+- Control Animation frequency.
+- Block z-index option.
+
+
+= Usage =
+
+https://www.youtube.com/watch?v=dfhHUBwM-jU
+
+<a href="https://www.youtube.com/watch?v=dfhHUBwM-jU">View Guide on YouTube</a>
 
 
 == Installation ==
@@ -44,6 +53,9 @@ via your favorite FTP application. The WordPress codex contains [instructions on
 
 
 == Changelog ==
+
+= 1.0.2 - 5-9-2019 =
+Compatible with WordPress 5.2
 
 = 1.0.1 - 12-07-2018 =
 Update UI
