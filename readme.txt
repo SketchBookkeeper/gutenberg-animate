@@ -54,6 +54,9 @@ via your favorite FTP application. The WordPress codex contains [instructions on
 
 == Changelog ==
 
+= 1.0.2 - 5-9-2019 =
+Compatible with WordPress 5.2
+
 = 1.0.1 - 12-07-2018 =
 Update UI
 Fix CSS not enqueuing on the frontend
